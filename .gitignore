@@ -130,3 +130,9 @@ dmypy.json
 
 #csv files
 *.csv
+
+#config file
+*.py
+
+#excel files
+*.xlsx
