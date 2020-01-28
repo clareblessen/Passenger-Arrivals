@@ -30,17 +30,19 @@ I was interested in looking at which destinations had the largest overall increa
 </p>
 
 ## Anomaly Analysis
-I performed anomaly analysis over the data for each city in an attempt to identify which cities saw unexpected increases or decreases in traveler volume. Using Facebook Prophet to model the trend and a 90% confidence interval, we see the shaded confidence interval around our actual data. The model’s assumption is that in the future we will see similar trend changes as the history, or in other words, the trend will continue at the same trajectory. Based on this assumption, we can identify points where the actual data reached a level that would be considered outside of the expected trend with 90% confidence, which I identified as anomalies. The analysis for Reykjavik, Iceland, can be seen below:
+I performed anomaly analysis over the data for each city in an attempt to identify which cities saw unexpected increases or decreases in traveler volume. Using Facebook Prophet to model the trend at a 90% confidence interval, we see the shaded confidence interval around our actual data. The model’s assumption is that in the future we will see similar trend changes as the history, or in other words, the trend will continue at the same trajectory. Based on this assumption, we can identify points where the actual data reached a level that would be considered outside of the expected trend with 90% confidence, which I identified as anomalies. The analysis for Reykjavik, Iceland, can be seen below:
 <p align="center">
-  <img width="900" height="500" src="https://github.com/clareblessen/Passenger-Arrivals/blob/master/Images/iceland_anomalies.jpeg">
+  <img width="800" height="600" src="https://github.com/clareblessen/Passenger-Arrivals/blob/master/Images/iceland_anomalies.jpeg">
 </p>
 From the graph, it's clear that there was a spike in tourists 2010-2012 that continued until it began to decrease in 2018. There was also a spike in activity in Winter 2017, which could warrant further investigation.
 
 ## Forecasting
 Finally, I attempted to forecast activity for the next three years. A SARIMA model offered the best results, with an rmse of 1,934,568
-compared to Facebook Prophet's rmse of 2,114,279. Using my exogenous variables of temperature, precipitation, cost of living index, and population of a city did not improve my model, but rather completely threw off the predictions. While weather does fluctuate in accordance with seasonality, it does not affect the popularity of a destination, most likely due to the fact that vacations are planned based on expected weather rather than changes in weather. My thinking in including cost of living index as a predictor was that a decrease in the expense of a destination might trigger increased tourism, however this proved generally untrue. Population also appeared to not be predictive of flight passenger arrival activity, despite an increased population theoretically leading to an increase in travelers returning home to that destination.
+compared to Facebook Prophet's rmse of 2,114,279. The SARIMA model utilized differencing of 1 (month) to stationarize the trend, and 12 (months=1 year) to stationarize the seasonality.
+
+Using my exogenous variables of temperature, precipitation, cost of living index, and population of a city did not improve my model, but rather completely threw off the predictions. While weather does fluctuate in accordance with seasonality, it does not affect the popularity of a destination, most likely due to the fact that vacations are planned based on expected weather rather than changes in weather. My thinking in including cost of living index as a predictor was that a decrease in the expense of a destination might trigger increased tourism, however this proved generally untrue. Population also appeared to not be predictive of flight passenger arrival activity, despite an increased population theoretically leading to an increase in travelers returning home to that destination.
 <p align="center">
-  <img width="900" height="500" src="https://github.com/clareblessen/Passenger-Arrivals/blob/master/Images/future_image.jpeg">
+  <img width="800" height="600" src="https://github.com/clareblessen/Passenger-Arrivals/blob/master/Images/future_image.jpeg">
 </p>
 
 ## Implications & Future Studies
