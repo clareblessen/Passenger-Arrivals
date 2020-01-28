@@ -14,7 +14,7 @@ I downloaded monthly passenger volume for the U.S. and 16 cities abroad from var
 ## EDA
 Every city evidenced very similar shape and seasonal trends: the differences lie in the magnitude and intercept.
 <p align="center">
-  <img width="800" height="600" src="https://github.com/clareblessen/Passenger-Arrivals/blob/master/Images/volume_by_city.jpeg">
+  <img width="700" height="600" src="https://github.com/clareblessen/Passenger-Arrivals/blob/master/Images/volume_by_city.jpeg">
 </p>
 When looking at the data on on average basis across all cities, we can see a clear upward trend and seasonality, with winter being an unpopular time to travel, and summer a popular time.
 <p align="center">
