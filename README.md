@@ -48,7 +48,7 @@ Using my exogenous variables of temperature, precipitation, cost of living index
 ## Dash Dashboard
 I created a dashboard to visualize each city for users to interact with.
 <p align="center">
-  <img width="800" height="600" src="https://github.com/clareblessen/Passenger-Arrivals/blob/master/Images/Dash_demo.jpg">
+  <img width="800" height="400" src="https://github.com/clareblessen/Passenger-Arrivals/blob/master/Images/Dash_demo.jpg">
 </p>
 
 ## Implications & Future Studies
