@@ -40,10 +40,13 @@ From the graph, it's clear that there was a spike in tourists 2010-2012 that con
 Finally, I attempted to forecast activity for the next three years. A SARIMA model offered the best results, with an rmse of 1,934,568
 compared to Facebook Prophet's rmse of 2,114,279. The SARIMA model utilized differencing of 1 (month) to stationarize the trend, and 12 (months=1 year) to stationarize the seasonality.
 
-Using my exogenous variables of temperature, precipitation, cost of living index, and population of a city did not improve my model, but rather completely threw off the predictions. While weather does fluctuate in accordance with seasonality, it does not affect the popularity of a destination, most likely due to the fact that vacations are planned based on expected weather rather than changes in weather. My thinking in including cost of living index as a predictor was that a decrease in the expense of a destination might trigger increased tourism, however this proved generally untrue. Population also appeared to not be predictive of flight passenger arrival activity, despite an increased population theoretically leading to an increase in travelers returning home to that destination.
+Using my exogenous variables of temperature, precipitation, cost of living index, and population of a city did not improve my model, but rather completely threw off the predictions. While weather does fluctuate in accordance with seasonality, it does not affect the popularity of a destination, most likely due to the fact that vacations are planned based on expected weather rather than changes in weather. My thinking in including cost of living index as a predictor was that a decrease in the expense of a destination might trigger increased tourism, however this proved generally untrue. Population also appeared to not be predictive of flight passenger arrival activity, despite an increased population theoretically leading to an increase in travelers returning home to that destination. My hypothesis is that both cost of living index and population did not vary enough over this time period to have much predictive value.
 <p align="center">
   <img width="800" height="600" src="https://github.com/clareblessen/Passenger-Arrivals/blob/master/Images/future_image.jpeg">
 </p>
+
+## Dash Dashboard
+I created a dashboard to visualize each 
 
 ## Implications & Future Studies
 Tourism is one of the largest economic drivers across the globe. By observing trends early on and identifying what is driving growth, economies can prepare for increased volume and businesses can know where to invest their capital as it relates to marketing, hotels, airlines, and all other facets of the tourism industry. 
