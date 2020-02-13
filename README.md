@@ -46,7 +46,10 @@ Using my exogenous variables of temperature, precipitation, cost of living index
 </p>
 
 ## Dash Dashboard
-I created a dashboard to visualize each 
+I created a dashboard to visualize each city for users to interact with.
+<p align="center">
+  <img width="800" height="600" src="https://github.com/clareblessen/Passenger-Arrivals/blob/master/Images/Dash_demo.jpg">
+</p>
 
 ## Implications & Future Studies
 Tourism is one of the largest economic drivers across the globe. By observing trends early on and identifying what is driving growth, economies can prepare for increased volume and businesses can know where to invest their capital as it relates to marketing, hotels, airlines, and all other facets of the tourism industry. 
